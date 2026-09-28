@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Aryan Sarode" />
+    <meta
+      name="description"
+      content="Projects by Aryan Sarode: an AI powered personal finance platform, a service management system, a private email RAG assistant, and a Java calendar application."
+    />
+    <title>Aryan Sarode | Projects</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <span class="site-name">Aryan Sarode</span>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          Menu
+        </button>
+        <nav id="main-nav" class="main-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="projects.html" class="nav-link active">Projects</a>
+          <a href="now.html" class="nav-link">Now</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="projects-page container">
+        <h1>Projects</h1>
+
+        <div
+          class="filter-row"
+          role="group"
+          aria-label="Filter projects by category"
+        >
+          <button
+            class="filter-btn active"
+            type="button"
+            data-filter="all"
+            aria-pressed="true"
+          >
+            All
+          </button>
+          <button
+            class="filter-btn"
+            type="button"
+            data-filter="ai"
+            aria-pressed="false"
+          >
+            AI
+          </button>
+          <button
+            class="filter-btn"
+            type="button"
+            data-filter="fullstack"
+            aria-pressed="false"
+          >
+            Full Stack
+          </button>
+          <button
+            class="filter-btn"
+            type="button"
+            data-filter="backend"
+            aria-pressed="false"
+          >
+            Backend
+          </button>
+          <button
+            class="filter-btn"
+            type="button"
+            data-filter="java"
+            aria-pressed="false"
+          >
+            Java
+          </button>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col">
+            <div class="card project-card" data-categories="ai fullstack">
+              <h2>FinPulse</h2>
+              <p>
+                An AI powered personal finance platform that imports
+                transactions into PostgreSQL, auto categorizes them, and flags
+                unusual spending with statistical and ARIMA models. Includes a
+                custom MCP server so AI agents like Claude Desktop can query
+                spending data through read only tools.
+              </p>
+              <div class="tags">
+                <span class="tag">Next.js</span>
+                <span class="tag">Python</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Claude API</span>
+                <span class="tag">MCP</span>
+              </div>
+              <a
+                class="btn-link"
+                href="https://github.com/AryanSarode14/finpulse"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card project-card" data-categories="fullstack backend">
+              <h2>IT Service Management System</h2>
+              <p>
+                A PostgreSQL backed service platform with 50+ relational tables,
+                JWT authentication, audit logging, and role based access. Covers
+                incident, asset, and change management modules.
+              </p>
+              <div class="tags">
+                <span class="tag">Angular</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">JWT</span>
+              </div>
+              <a
+                class="btn-link"
+                href="https://github.com/AryanSarode14"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card project-card" data-categories="ai backend">
+              <h2>Personal Email RAG System</h2>
+              <p>
+                A private question answering pipeline over my Gmail, using
+                sentence transformer embeddings, ChromaDB for retrieval, and
+                local Llama 3.2 through Ollama. Emails are ingested securely
+                with OAuth2.
+              </p>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Llama 3.2</span>
+                <span class="tag">ChromaDB</span>
+                <span class="tag">OAuth2</span>
+              </div>
+              <a
+                class="btn-link"
+                href="https://github.com/AryanSarode14"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card project-card" data-categories="java">
+              <h2>Multi Mode Calendar System</h2>
+              <p>
+                A Java calendar application built with MVC, supporting GUI,
+                command line, and batch modes. Handles timezone aware recurring
+                events and CSV and ICS import and export, with JUnit tests.
+              </p>
+              <div class="tags">
+                <span class="tag">Java</span>
+                <span class="tag">Swing</span>
+                <span class="tag">MVC</span>
+                <span class="tag">JUnit</span>
+              </div>
+              <a
+                class="btn-link"
+                href="https://github.com/AryanSarode14"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2026 Aryan Sarode &middot; MIT License</p>
+      </div>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/projects.js"></script>
+  </body>
+</html>
