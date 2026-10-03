@@ -6,11 +6,15 @@ toggle.addEventListener("click", () => {
   toggle.setAttribute("aria-expanded", String(isOpen));
 });
 
-const totalSessions = 57;
-let currentSessions = 23;
+const progressContainer = document.querySelector(".progress");
+const totalSessions = Number(
+  progressContainer?.getAttribute("aria-valuemax") ?? 57,
+);
+let currentSessions = Number(
+  progressContainer?.getAttribute("aria-valuenow") ?? 0,
+);
 
 const progressBar = document.querySelector(".progress-bar");
-const progressContainer = document.querySelector(".progress");
 const progressText = document.querySelector(".progress-text");
 const minusButton = document.querySelector(".session-minus");
 const plusButton = document.querySelector(".session-plus");
