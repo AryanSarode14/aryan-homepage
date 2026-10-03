@@ -20,6 +20,8 @@ function renderProgress() {
   progressBar.style.width = `${percent}%`;
   progressContainer.setAttribute("aria-valuenow", String(currentSessions));
   progressText.textContent = `${currentSessions} / ${totalSessions} (${percent}%)`;
+  minusButton.disabled = currentSessions === 0;
+  plusButton.disabled = currentSessions === totalSessions;
 }
 
 if (minusButton && plusButton) {
